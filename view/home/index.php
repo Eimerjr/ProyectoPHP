@@ -1,3 +1,10 @@
+<?php
+    require_once("../../config/conexion.php");
+    if (isset($_SESSION["usuario_id"])){
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -7,7 +14,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Startmin - Bootstrap Admin Theme</title>
+        <title>Ticketons</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="../home/css/bootstrap.min.css" rel="stylesheet">
@@ -46,7 +53,7 @@
 
                         
                     <!-- /.row -->
-                    </div>
+                    <!-- </div>
                     
                     <div class="row">
                         <div class="col-lg-3 col-md-6">
@@ -118,7 +125,7 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- /.row -->
         </div>
@@ -131,15 +138,24 @@
         <script src="../home/js/bootstrap.min.js"></script>
 
         <!-- Metis Menu Plugin JavaScript -->
-        <script src="../home/js/metisMenu.min.js"></script>
+        <!-- <script src="../home/js/metisMenu.min.js"></script> -->
 
         <!-- Morris Charts JavaScript -->
-        <script src="../home/js/raphael.min.js"></script>
+        <!-- <script src="../home/js/raphael.min.js"></script>
         <script src="../home/js/morris.min.js"></script>
-        <script src="../home/js/morris-data.js"></script>
+        <script src="../home/js/morris-data.js"></script> -->
 
         <!-- Custom Theme JavaScript -->
-        <script src="../home/js/startmin.js"></script>
+        <!-- <script src="../home/js/startmin.js"></script> -->
+        
+        <script src="../home/home.js"></script>
+
 
     </body>
 </html>
+<?php
+}else{
+header("Location:".Conectar::ruta()."index.php");
+}
+
+?>

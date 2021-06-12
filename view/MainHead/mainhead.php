@@ -14,7 +14,7 @@
     </button> -->
 
     <ul class="nav navbar-nav navbar-left navbar-top-links">
-        <li><a href="/proyectoPhp/view/home/index.php"><i class="fa fa-home fa-fw"></i> Inicio</a></li>
+        <li><a href="/proyectoPhp/view/home/index.php"><i class="fa fa-home fa-fw"></i> <span>INICIO</span></a></li>
     </ul>
 
     <ul class="nav navbar-right navbar-top-links">
@@ -26,7 +26,8 @@
             <!--  -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <i class="fa fa-user fa-fw"></i> Perfil <b class="caret"></b>
+                
+                <i class="fa fa-user fa-fw"></i> <span><?php echo $_SESSION["usuario_nombre"] ?> <?php echo $_SESSION["usuario_apellido"] ?></span> <b class="caret"></b>
             </a>
             <ul class="dropdown-menu dropdown-user">
                 <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
@@ -34,7 +35,7 @@
                 <li><a href="#"><i class="fa fa-gear fa-fw"></i> Opciones</a>
                 </li>
                 <li class="divider"></li>
-                <li><a href="/proyectoPhp/index.php"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
+                <li><a href="../cerrarSesion/cerrarsesion.php"><i class="fa fa-sign-out fa-fw"></i> Salir</a>
                 </li>
             </ul>
         </li>
