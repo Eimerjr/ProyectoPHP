@@ -1,28 +1,37 @@
+<?php
+    require_once("../../config/conexion.php");
+    if (isset($_SESSION["usuario_id"])){
 
+?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nuevo Tickete</title>
-</head>
-<body>
-<?php 
-        require_once("../Htmlestilos/estilos.html");
-        require_once("../MainHead/mainhead.php");
-        require_once("../MainNav/mainnav.php");
-        
-        ?>
-                     <div id="page-wrapper"> 
+<html>
 
- <div class="container-fluid">
-                    <div class="row">
-<div class="col-lg-12">
-                            <h1 class="page-header">Consultar Tiquete</h1>
-                        </div>
-</div>
-</div>
+    <?php 
+    require_once("../estilocabecera/estilocabecera.php");
+    ?>
+	<title>Ticket consulta</title>
+</head>
+<body class="with-side-menu">
+
+	<?php require_once("../cabecera/cabecera.php") ?>
+
+	<div class="mobile-menu-left-overlay"></div>
+	<?php require_once("../nav/nav.php");   ?>
+
+	<div class="page-content">
+		<div class="container-fluid">
+			Blank page.
+		</div><!--.container-fluid-->
+	</div><!--.page-content-->
+
+    <?php require_once("../Mainjs/js.php"); ?>
+    <script type ="text/javascript" src="consultarTicket.js" ></script>
 </body>
 </html>
+<?php
+}else{
+header("Location:".Conectar::ruta()."index.php");
+}
+
+?>
